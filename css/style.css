@@ -18,6 +18,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    /* overflow-x: hidden; */
+}
+
 a {
     text-decoration: none;
     color: #ddd;
@@ -66,7 +70,7 @@ header .logo a:hover {
 .nav-links {
     display: flex;
     justify-content: space-between;
-    width: 20%;
+    gap: 1rem;
     font-size: 1.125rem;
 }
 
@@ -129,6 +133,24 @@ header .logo a:hover {
     border-radius: .5rem;
 }
 
+blockquote {
+    background: #e5e7eb;
+    border-left: 10px solid #ccc;
+    margin: 1rem .5rem;
+    padding: 2rem .8rem;
+    font-size: 2.25rem;
+    font-weight: lighter;
+    font-style: italic;
+    color: #1f2937;
+}
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
 
 
 
@@ -145,7 +167,7 @@ header .logo a:hover {
 
 @media (max-width: 768px) {
     .nav-links {
-        width: 20%;
+        gap: .5rem;
     }
 
     #hero-section {
@@ -172,16 +194,12 @@ header .logo a:hover {
         padding: 1rem 3rem;
     }
 
-    .nav-links {
-        width: 45%;
-    }
-
     #hero-section {
         padding: 2rem;
     }
 
     .hero-main-pic img {
-        width: 30rem;
+        width: 28rem;
     }
 
     .random-info {
@@ -196,11 +214,9 @@ header .logo a:hover {
     header {
         padding: 1rem 2rem;
     }
-    .nav-links {
-        width: 55%;
-    }
+
     .hero-main-pic img {
-        width: 27rem;
+        width: 25rem;
     }
 
     .random-info {
