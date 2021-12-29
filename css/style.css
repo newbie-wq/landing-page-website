@@ -2,6 +2,8 @@
 
 :root {
     --dark-background: #1f2937;
+    --white: #f9faf8;
+    --blue: #3882f6;
 }
 
 * {
@@ -24,6 +26,16 @@ a {
 
 a:hover {
     text-decoration: underline;
+    color: #fff;
+}
+
+button {
+    color: var(--white);
+    background-color: var(--blue);
+    font-size: 1rem;
+    padding: .3rem 1.4rem;
+    border: none;
+    border-radius: .3rem;
 }
 
 header {
@@ -54,7 +66,7 @@ header .logo a:hover {
 .nav-links {
     display: flex;
     justify-content: space-between;
-    width: 15%;
+    width: 20%;
     font-size: 1.125rem;
 }
 
@@ -63,21 +75,59 @@ header .logo a:hover {
     justify-content: center;
     align-items: center;
     background-color: var(--dark-background);
-    color: #f9faf8;
+    color: var(--white);
     padding: 5rem 5rem;
-    text-align: center;
 }
 
 .hero-main-text h1{
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-size: 2.927rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.hero-main-text button.hero-button {
+    border: none;
+    margin-top: .3rem;
 }
 
 .hero-main-pic img{
     width: 40rem;
+    height: auto;
 }
 
+.random-info {
+    text-align: center;
+    padding: 2rem 5rem;
+}
 
+.random-info h1 {
+    font-size: 2.25rem;
+    color: var(--dark-background);
+}
+
+.flex-info {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.info {
+    width: 16rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: .5rem;
+    padding: 0 .5rem 2rem;
+    text-align: center;
+}
+
+.info img {
+    height: 15rem;
+    width: 90%;
+    border-radius: .5rem;
+}
 
 
 
@@ -107,7 +157,10 @@ header .logo a:hover {
         width: 35rem;
     }
 
-
+    .random-info {
+        padding: 2rem 3rem;
+    }
+    
 }
 
 @media (max-width: 425px) {
@@ -127,13 +180,30 @@ header .logo a:hover {
         padding: 2rem;
     }
 
-
     .hero-main-pic img {
         width: 30rem;
     }
+
+    .random-info {
+        padding: 2rem;
+    }
+    
 }
 @media (max-width: 320px) {
+    .hero-main-text h1 {
+        line-height: 2.7rem;
+    }
+    header {
+        padding: 1rem 2rem;
+    }
+    .nav-links {
+        width: 55%;
+    }
     .hero-main-pic img {
         width: 27rem;
+    }
+
+    .random-info {
+        padding: 1rem;
     }
 }
